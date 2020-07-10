@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo&family=Roboto&display=swap');
+body {
+  font-family: 'Heebo', 'Roboto', sans-serif;
+}
+
+#root, #status-bar, table {
+  margin-top: 20px; /* force space between components */
+}
+
+.header-phone-number {
+  font-weight: bold;
+  color: #707070;
+}
+
+.tick {
+  cursor: pointer;
+}
+
+.not-done {
+  display: none;
+}
