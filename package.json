@@ -1,7 +1,7 @@
 {
-  "name": "profit",
+  "name": "propit",
   "version": "1.0.0",
-  "description": "",
+  "description": "My solution of the test task",
   "main": "index.js",
   "scripts": {
     "start": "concurrently \"yarn run server\" \"yarn run client:start\"",
@@ -10,7 +10,7 @@
     "client:start": "yarn --cwd client start",
     "client:build": "yarn --cwd client build"
   },
-  "keywords": [],
+  "keywords": ["node", "typescript", "mysql", "express"],
   "author": "",
   "license": "MIT",
   "dependencies": {
