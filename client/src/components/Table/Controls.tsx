@@ -43,13 +43,15 @@ export default class Controls extends React.Component<IProps, IState> {
 
     btnDeleteHandler = () => {
         let taskId = this.props.id;
+        
         fetch(`http://localhost:3000/delete?id=${taskId}`, {
             method: 'POST'
         }).then(res => {
+            
             this.setState({
                 deleted: true
             })
-        })
+        }).finally(() => {alert('המשימה נמחקה בהצלחה')});
     }
 
     componentDidUpdate(){
