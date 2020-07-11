@@ -40,6 +40,8 @@ export default class Status extends React.Component<IProps, IState> {
             status: '1' // just to change
         }))
 
+        window.location.reload();
+
     }
 
     render() {

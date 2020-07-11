@@ -39,6 +39,7 @@ export default class Controls extends React.Component<IProps, IState> {
                 })
             })
         }
+        window.location.reload();
     }
 
     btnDeleteHandler = () => {
@@ -52,6 +53,7 @@ export default class Controls extends React.Component<IProps, IState> {
                 deleted: true
             })
         }).finally(() => {alert('המשימה נמחקה בהצלחה')});
+        window.location.reload();
     }
 
     componentDidUpdate(){

@@ -55,6 +55,8 @@ export default class StatusBar extends React.Component<IProps, IState> {
         }).then(data => this.setState({
             newEntry: data
         }));
+
+        window.location.reload();
     }
 
     render() {
