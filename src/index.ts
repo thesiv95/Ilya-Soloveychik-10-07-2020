@@ -69,9 +69,7 @@ app.post('/update', (req: any, res: any) => {
 
 app.post('/updateTaskStatus', (req: any, res: any) => {
     let id: number = req.query.id;
-    let newStatus: number = req.query.status;
-    if (newStatus !== 0) newStatus = 0;
-    if (newStatus !== 1) newStatus = 0;
+    let newStatus: any = req.query.newStatus;
     let query = `UPDATE todos SET done=${newStatus} WHERE id=${id}`;
     mysqlConn.query(query, (error: string, result: any, fields: any) => {
         if (error) throw new Error(error);
