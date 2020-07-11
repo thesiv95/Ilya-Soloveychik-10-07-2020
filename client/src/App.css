@@ -13,10 +13,15 @@ body {
   color: #707070;
 }
 
-.tick {
+.status {
   cursor: pointer;
+  display: inline-flex;
 }
 
-.not-done {
+.show-status {
+  display: block;
+}
+
+.hide-status {
   display: none;
 }

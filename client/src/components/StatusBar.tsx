@@ -42,7 +42,14 @@ export default class StatusBar extends React.Component<IProps, IState> {
     }
 
     addNewEntry = () => {
-        let params = '?name=Anonymous&phone=0581234567&email=mail@israel.co.il&text=Text%20instance';
+        let name = prompt('שם משתמש', 'שם משתמש');
+        let phone = prompt('טלפון', '0526589295');
+        let email = prompt('מייל', 'name@doamin.com');
+        let text = prompt('טקסט משימה', 'הוסף משימה חדשה');
+
+        let params = `?name=${name}&phone=${phone}&email=${email}&text=${text}`;
+       //let params = '?name=Abo&phone=222222&email=ddd@ss.ss&text=sasa'
+
         fetch(`http://localhost:3000/create${params}`, {
             method: 'POST'
         }).then(data => this.setState({
@@ -65,6 +72,5 @@ export default class StatusBar extends React.Component<IProps, IState> {
                 </div>
             </div>
         )
-        // TODO: props
     }
 }

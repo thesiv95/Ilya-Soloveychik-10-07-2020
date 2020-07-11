@@ -19,9 +19,18 @@ app.get('/get-all', (req: any, res: any) => {
     })
 });
 
+app.get('/view', (req: any, res: any) => {
+    let id: number = req.query.id;
+    let query = `SELECT text from todos WHERE id=${id}`;
+    mysqlConn.query(query, (error: string, result: any, fields: any) => {
+        if (error) throw new Error(error);
+        res.send(result[0].text); // single entry with single object in single array
+    })
+})
+
 app.post('/create', (req: any, res: any) => {
     let currentDate = new Date();
-    let currentDateFormatted: string = currentDate.toISOString().slice(0, 11);
+    let currentDateFormatted: string = currentDate.toISOString().slice(0, 10);
     let query = `INSERT INTO todos(name, phone, email, text, date, done) VALUES 
         (   
             ${mysqlInstance.escape(req.query.name)},
