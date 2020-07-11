@@ -1,10 +1,20 @@
 import React from 'react';
 
-export default class TotalEntries extends React.Component {   
+interface IProps {
+    totalEntries?: number;
+}
+
+interface IState {
+    
+}
+
+export default class TotalEntries extends React.Component<IProps, IState> {
+    
     render() {
         return (
                 <div className="col-md-9">
-                   <h4 className="text-right">רשימת הלקוחות (128)</h4>
+                   <h4 className="text-right">רשימת הלקוחות 
+                   ({ this.props.totalEntries })</h4>
                 </div>
         )
     }

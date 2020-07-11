@@ -21,9 +21,7 @@ app.get('/get-all', (req: any, res: any) => {
 
 app.post('/create', (req: any, res: any) => {
     let currentDate = new Date();
-    let month = currentDate.getMonth() < 10 ? '0' + currentDate.getMonth() : currentDate.getMonth();
-    let day = currentDate.getDate() < 10 ? '0' + currentDate.getDate() : currentDate.getDate();
-    let currentDateFormatted: string = `${currentDate.getFullYear()}-${month}-${day}`;
+    let currentDateFormatted: string = currentDate.toISOString().slice(0, 11);
     let query = `INSERT INTO todos(name, phone, email, text, date, done) VALUES 
         (   
             ${mysqlInstance.escape(req.query.name)},

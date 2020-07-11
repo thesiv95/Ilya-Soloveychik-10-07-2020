@@ -20,8 +20,7 @@ export default class Table extends React.Component {
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <input type="hidden" id="_id" value="1" />
+                        <tr data-id="1">
                             <td>שם משתמש</td>
                             <td>0526589295</td>
                             <td>name@doamin.com</td>
