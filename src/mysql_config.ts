@@ -1,9 +1,5 @@
 const mysql = require('mysql');
 
-// if (process.env.NODE_ENV !== 'production') {
-//     require('dotenv').config();
-// }
-
 const mySqlConnection = mysql.createConnection({
     host: 'sql2.freemysqlhosting.net',
     user: 'sql2353881',
